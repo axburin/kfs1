@@ -19,6 +19,7 @@ C_SRC		= $(SRC_DIR)/kernel.c \
 			  $(SRC_DIR)/cursor.c \
 			  $(SRC_DIR)/printk.c \
 			  $(SRC_DIR)/ft_put.c \
+			  $(SRC_DIR)/utils.c \
 			  $(GDT_DIR)/gdt.c
 
 ASM_SRC		= $(SRC_DIR)/boot.s \

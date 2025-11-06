@@ -25,11 +25,11 @@
 #define width 80
 #define height 25
 
-void move_cursor_hardware(uint16_t x, uint16_t y);
-void set_cursor_pos(uint16_t x, uint16_t y);
-void print(const char *s);
-void scrollup();
-void newline();
-void Reset();
+void	move_cursor_hardware(uint16_t x, uint16_t y);
+void	set_cursor_pos(uint16_t x, uint16_t y);
+void	print(const char *s);
+void	scrollup();
+void	newline();
+void	Reset();
 
 #endif

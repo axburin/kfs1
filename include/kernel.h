@@ -6,5 +6,6 @@
 #include "vga.h"
 #include "gdt.h"
 #include "printk.h"
+#include "utils.h"
 
 #endif

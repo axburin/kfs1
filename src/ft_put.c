@@ -2,7 +2,7 @@
 
 int	ft_putchar_m(int c) {
 	char str[2] = {(char)c, '\0'};
-    print(str);
+	print(str);
 	return (1);
 }
 
