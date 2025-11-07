@@ -31,7 +31,7 @@ all: $(ISO)
 
 $(ISO): $(NAME)
 	@mv $(NAME) $(ISO_DIR)/boot/
-	@grub-mkrescue -o $@ $(ISO_DIR) --compress=xz -d /usr/lib/grub/i386-pc 2>/dev/null
+	@grub-mkrescue -o $@ $(ISO_DIR) --compress=xz -d /usr/lib/grub/i386-pc
 	@echo "ISO: $$(du -h $@ | cut -f1)"
 
 $(NAME): $(OBJS)
