@@ -14,18 +14,22 @@ int	ft_toupper(int c)
 		return (c);
 }
 
-int	ft_puthexa(unsigned long nb, int n)
+int	ft_puthexa(unsigned long nb)
 {
+	int32_t n = 0;
+
 	if (nb > 15)
-		n = ft_puthexa(nb / 16, n);
+		n += ft_puthexa(nb / 16);
 	n += ft_putchar_m(HEX[nb % 16]);
 	return (n);
 }
 
-int	ft_puthexa_upper(unsigned long nb, int n)
+int	ft_puthexa_upper(unsigned long nb)
 {
+	int32_t n = 0;
+
 	if (nb > 15)
-		n += ft_puthexa_upper(nb / 16, n);
+		n += ft_puthexa_upper(nb / 16);
 	n += ft_putchar_m(ft_toupper(HEX[nb % 16]));
 	return (n);
 }
@@ -64,7 +68,8 @@ int	ft_putptr(void *ptr)
 	if (!ptr)
 		return (ft_putstr_m("(nil)"));
 	count = ft_putstr_m("0x");
-	return (ft_puthexa(nb, count));
+	count += ft_puthexa(nb);
+	return (count);
 }
 
 int	ft_putint(int nbr)

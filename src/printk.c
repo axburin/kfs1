@@ -16,9 +16,9 @@ int	ft_handle_format(va_list arg, const char str)
 	else if (str == 'u')
 		count = ft_putint_unsigned(va_arg(arg, unsigned int));
 	else if (str == 'x')
-		count = ft_puthexa(va_arg(arg, unsigned int), count);
+		count += ft_puthexa(va_arg(arg, unsigned int));
 	else if (str == 'X')
-		count = ft_puthexa_upper(va_arg(arg, unsigned int), count);
+		count += ft_puthexa_upper(va_arg(arg, unsigned int));
 	else if (str == '%')
 		count = ft_putchar_m('%');
 	return (count);
