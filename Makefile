@@ -6,7 +6,7 @@ AS			= nasm
 LD			= ld
 
 CFLAGS		= -m32 -fno-builtin -fno-exceptions -fno-stack-protector \
-			  -nostdlib -nodefaultlibs -Iinclude -O0
+			  -nostdlib -nodefaultlibs -Iinclude
 ASFLAGS		= -f elf32
 LDFLAGS		= -m elf_i386 -T linker.ld
 
@@ -23,7 +23,6 @@ C_SRC		= $(SRC_DIR)/kernel.c \
 			  $(SRC_DIR)/printk.c \
 			  $(SRC_DIR)/ft_put.c \
 			  $(SRC_DIR)/utils.c \
-			  $(SRC_DIR)/stack_dump.c \
 			  $(GDT_DIR)/gdt.c
 
 OBJS		= $(ASM_SRC:.s=.o) $(C_SRC:.c=.o)
